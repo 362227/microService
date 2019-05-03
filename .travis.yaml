@@ -1,6 +1,6 @@
 sudo: required
-language: PHP
-laravel:
+language: php
+php:
   - "7.3.2"
 services:
   - docker
