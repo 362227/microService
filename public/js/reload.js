@@ -10,4 +10,4 @@ window.setInterval(function() {
         //$('.back').text(3); // Update some DOM element with new number
         //$(".title").flip(false);
     });
-}, 1000);
+}, 1200);
