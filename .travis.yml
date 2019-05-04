@@ -27,6 +27,7 @@ script:
   - npm run production
  # build docker images
   - docker build -t ccss/micro-service .
+  - docker run --rm -it -p 8080:8080 ccss/micro-service
   - docker tag ccss/micro-service registry.heroku.com/$HEROKU_APP_NAME/web
 deploy:
   provider: script
@@ -34,7 +35,6 @@ deploy:
   # push to dockerhub
     docker push ccss/micro-service;
     docker push registry.heroku.com/$HEROKU_APP_NAME/web;
-    docker run -p 5000:5000 -e PORT=5000 registry.heroku.com/$HEROKU_APP_NAME/web
     heroku container:release web --app $HEROKU_APP_NAME
   on:
     branch: master
