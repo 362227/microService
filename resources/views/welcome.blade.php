@@ -10,7 +10,7 @@
             </div>
 
             <div class="links">
-                <a href=" {{url('/turns/add')}} "></a>
+                <a href=" {{url('/turns/add')}} ">Pedir turno</a>
             </div>
         </div>
     </div>
