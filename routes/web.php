@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/turns', 'HomeController@getCount');
+Route::get('/turns/add', 'HomeController@addTruno');
