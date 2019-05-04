@@ -1,7 +1,7 @@
 sudo: required
 language: php
 php:
-  - 7.1.9
+  - 7.3.2
 services:
   - docker
 before_install:
@@ -24,7 +24,6 @@ before_script:
   - npm install
 script:
   - vendor/bin/phpunit --coverage-text
-  - phpcs --ignore=app/Http/Controllers/Auth,app/Http/Controllers/Controller.php app/Http/Controllers
   - npm run production
   - jshint resources/assets/js/modules/*
  # build docker images
@@ -37,4 +36,5 @@ deploy:
     docker push ccss/micro-service;
     docker push registry.heroku.com/$HEROKU_APP_NAME/web;
     heroku container:release web --app $HEROKU_APP_NAME
-  branch: master
+  on:
+    branch: master
