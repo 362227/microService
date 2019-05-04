@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<script src=" {{url('js/reload.js')}} "></script>
+<script src=" js/reload.js "></script>
 @section('content')
     <div class="flex-center position-ref full-height">
 
