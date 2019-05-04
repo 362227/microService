@@ -6,8 +6,8 @@ window.setInterval(function() {
         // data.users - could be array of user objects, etc
         $('.front').text(data.value); // Update some DOM element with new number
 
-		responsiveVoice.speak("Turno : "+data.value);
+		responsiveVoice.speak("Hello guys : "+data.value);
         //$('.back').text(3); // Update some DOM element with new number
         //$(".title").flip(false);
     });
-}, 1800);
+}, 2800);
