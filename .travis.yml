@@ -24,7 +24,6 @@ before_script:
   - npm install
 script:
   - vendor/bin/phpunit --coverage-text
-  - npm run production
  # build docker images
   - docker build -t ccss/micro-service .
   - docker run --rm -it -d -p 8181:8181 ccss/micro-service
