@@ -5,5 +5,3 @@ RUN docker-php-ext-install pdo mbstring
 WORKDIR /app
 COPY . /app
 RUN composer install
-ENV PORT 80
-ENTRYPOINT []
